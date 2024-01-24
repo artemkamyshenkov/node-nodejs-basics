@@ -1,7 +1,6 @@
-import { promises as fsPromises } from 'fs';
+import { promises as fsPromises, constants } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import fs from 'fs';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -10,7 +9,7 @@ const fileContent = 'I am fresh and young';
 
 const create = async () => {
   fsPromises
-    .access(newFilePath, fs.constants.F_OK)
+    .access(newFilePath, constants.F_OK)
     .then(() => {
       console.error('FS operation failed');
     })
