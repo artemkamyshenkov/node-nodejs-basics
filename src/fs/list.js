@@ -1,4 +1,4 @@
-import { promises as fsPromises, readdirSync, constants } from 'fs';
+import { promises as fsPromises, constants } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
